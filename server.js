@@ -7,13 +7,12 @@ const connectDB = require("./config/db");
 const userRoutes = require("./routes/users");
 const errorHandler = require("./middlewares/error");
 
-
 // Connect to DB
 connectDB();
 
 // Express App
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // middlewares
 app.use(cors());
@@ -24,8 +23,8 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/products", (req, res) => {
   return res.status(200).json({
-    message: 'This is new feature change, a new route for products'
-  })
+    message: "This is new feature change, a new route for products",
+  });
 });
 
 app.use(errorHandler);
