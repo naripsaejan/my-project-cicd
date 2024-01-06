@@ -1,5 +1,5 @@
 {
-    "name": "nodejs-restapi-render-deployment",
+    "name": "my-project-cicd",
     "version": "1.0.0",
     "description": "",
     "main": "server.js",
