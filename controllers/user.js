@@ -17,7 +17,8 @@ const createUser = async (req, res, next) => {
     }
 
     const user = await User.create({
-      name, email
+      name,
+      email,
     });
 
     res.status(200).json({
@@ -28,7 +29,7 @@ const createUser = async (req, res, next) => {
     console.log(error);
     return next(error);
   }
-}
+};
 
 const getUsers = async (req, res, next) => {
   try {
